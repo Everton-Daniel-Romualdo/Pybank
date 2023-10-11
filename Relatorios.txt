@@ -1,0 +1,6 @@
+***Arquivo contendo relatorios diarios sobre o desenvolvimento do sistema***
+
+11/10{
+    *reformular todo o sistema de funções do programa para que se tornen apenas funções puras e todo o sitema de menus se concentre no arquivo main.
+    
+} 
