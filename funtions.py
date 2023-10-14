@@ -53,21 +53,21 @@ def sair():
 
 
 def depositar(valor):
-    user_online[2] += int(valor)
+    user_online[2] += float(valor)
     atualizar()
 
     
 
 def sacar(valor):
-    if int(valor) > user_online[2]:
+    if float(valor) > user_online[2]:
        return False
     else:
-        user_online[2] -= int(valor)
+        user_online[2] -= float(valor)
         atualizar()
         return True
 
 
 
 def criar_boleto(devedor, valor):
-    user_debt.append([devedor, [user_online[0], valor]])
+    user_debt.append([devedor, [user_online[0], float(valor)]])
     
