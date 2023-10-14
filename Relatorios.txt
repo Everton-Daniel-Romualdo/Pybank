@@ -1,6 +1,23 @@
 ***Arquivo contendo relatorios diarios sobre o desenvolvimento do sistema***
 
 11/10{
-    *reformular todo o sistema de funções do programa para que se tornen apenas funções puras e todo o sitema de menus se concentre no arquivo main.
-    
+    comitado{
+        *reformular todo o sistema de funções do programa para que se tornen apenas funções puras e todo o sitema de menus se concentre no arquivo main.
+    }
+    não comitado{
+        *Encerramento:
+            *função criar boleto criada usando lista dentro de listas.
+            *função sair atualizada. agora usar o .pop() para excluir os itens da lista user_online
+            *função adm() implementada. printa todas as variaveis do sistema para fins de debug
+            *erro001: quando cadastro 2 usuarios, logo com 1 deles e depois saiu e logo com o outro, a função logar() retorna False e não me loga no sistema.
+    }
+
 } 
+
+14/10{
+    comitado{
+        *Erro 001 Solucionado - login funcionando normalmente
+        *Função ADM comitada - printa todas as variaveis
+        
+    }
+}

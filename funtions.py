@@ -1,11 +1,14 @@
 #Arquivos com as funções para manipular e processar informações e pedidos
-user_info = [] #Banco de dados dos usuarios 
+user_info = [] #Banco de dados dos usuarios
+user_debt = []
 user_online = []#dados do usuario logado - nome,senha,saldo,divida
+
 
 
 def adm():
     print(f"User info: {user_info}")
     print(f"User_online {user_online}")
+    print(f"user_debt {user_debt}")
 
 
 
@@ -38,13 +41,14 @@ def logar(nome, senha):#Faz login com o usuario
             user_online.append(user_info[i+2])
             user_online.append(user_info[i+3])
             return True
-        else:
-            return False
+    return False
         
 
 
 def sair():
-    user_online = []
+    for i in range(len(user_online) -1, -1, -1):
+        user_online.pop()
+
 
 
 
@@ -61,3 +65,9 @@ def sacar(valor):
         user_online[2] -= int(valor)
         atualizar()
         return True
+
+
+
+def criar_boleto(devedor, valor):
+    user_debt.append([devedor, [user_online[0], valor]])
+    

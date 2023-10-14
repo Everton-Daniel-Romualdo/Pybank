@@ -28,6 +28,8 @@ while True:
                     print("CADASTRO REALIZADO COM SUCESSO!")
                 else:
                     print("ERRO: USUARIO JÁ EXISTENTE!")
+            elif opcao_escolhida == 'adm':
+                fc.adm()
             elif opcao_escolhida == 'l':
                 nome = input("Digite seu nome de usuario: ")
                 senha = input("Digite sua senha: ")
@@ -45,6 +47,7 @@ while True:
             print("Depositar [d]")
             print("Sacar [s]")
             print("Ver Saldo [vs]")
+            print("Criar boleto [cb]")
             print("Sair [ex]")
             opcao_escolhida = input("Selecione uma opção: ")
 
@@ -52,6 +55,8 @@ while True:
                 valor = input("Digite o valor de deposito: ")
                 fc.depositar(valor)
                 print(f"DEPOSITO REALIZADO COM SUCESSO! NOVO SALDO DE R$ {fc.user_online[2]}")
+            elif opcao_escolhida == 'adm':
+                fc.adm()
             elif opcao_escolhida == 's':
                 valor = input("Digite o valor do saque: ")
                 retorno_de_funcao = fc.sacar(valor)
@@ -61,6 +66,11 @@ while True:
                     print(f"SALDO INSUFICIENTE! SEU SALDO É DE R${fc.user_online[2]}")
             elif opcao_escolhida == 'vs':
                 print(f"SEU SALDO É DE R${fc.user_online[2]}")
+            elif opcao_escolhida == 'cb':
+                nome = input("digite o nome de usuario do devedor: ")
+                valor = input("Digite o valor da cobrança: ")
+                fc.criar_boleto(nome, valor)
+                print(fc.user_debt)
             elif opcao_escolhida == 'ex':
                 fc.sair()
                 usuario_logado = False
